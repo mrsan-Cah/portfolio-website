@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services & Certificates</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Global Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #6366f1, #4b6cb7);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e0e7ff;
+    }
+
+    /* Container for Services */
+    .services-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 180%;
+      height: 180%;
+      background: radial-gradient(#6366f133, transparent 60%);
+      top: -50%;
+      left: -40%;
+      transform: rotate(25deg);
+      z-index: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .card i {
+      font-size: 42px;
+      color: #6366f1;
+      margin-bottom: 15px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: #1f2937;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 16px;
+      background: #6366f1;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card a:hover {
+      background: #4f46e5;
+    }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1><i class="fas fa-certificate"></i> Services & Certificates</h1>
+    <p>Learn valuable tech skills and earn certificates that matter.</p>
+  </header>
+
+  <!-- Services Grid Section -->
+  <section class="services-section">
+
+    <div class="card">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>Master HTML, CSS, JS, and modern frameworks like React & Tailwind. Build real projects.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile App Development</h3>
+      <p>Create powerful Android & iOS apps using Flutter and Dart with hands-on guidance.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-database"></i>
+      <h3>Database Management</h3>
+      <p>Learn MySQL, MongoDB & Firebase with real-time queries and schema design skills.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Cyber Security</h3>
+      <p>Understand threats, data protection & basic ethical hacking. Security from the ground up.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-brain"></i>
+      <h3>AI & Machine Learning</h3>
+      <p>Dive into ML algorithms, Python, and practical projects to start your AI journey.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-network-wired"></i>
+      <h3>Networking Fundamentals</h3>
+      <p>Explore IP routing, DNS, TCP/IP layers, and build strong core computer network knowledge.</p>
+      <a href="#">Get Certificate</a>
+    </div>
+
+  </section>
+
+</body>
+</html>
