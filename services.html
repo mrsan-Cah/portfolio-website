@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services & Certificates</title>
+  <title>Web & App Services</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    /* Global Styling */
     * {
       margin: 0;
       padding: 0;
@@ -15,12 +14,43 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f1f5f9;
+      background: #f8fafc;
       color: #1e293b;
-      line-height: 1.6;
     }
 
-    /* Header Section */
+    .navbar {
+      background: #1e3a8a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .navbar li a:hover {
+      color: #93c5fd;
+    }
+
     header {
       background: linear-gradient(135deg, #6366f1, #4b6cb7);
       padding: 60px 20px;
@@ -30,7 +60,6 @@
 
     header h1 {
       font-size: 2.8rem;
-      margin-bottom: 10px;
     }
 
     header p {
@@ -38,7 +67,6 @@
       color: #e0e7ff;
     }
 
-    /* Container for Services */
     .services-section {
       max-width: 1200px;
       margin: 0 auto;
@@ -54,49 +82,36 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       padding: 30px 20px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      width: 180%;
-      height: 180%;
-      background: radial-gradient(#6366f133, transparent 60%);
-      top: -50%;
-      left: -40%;
-      transform: rotate(25deg);
-      z-index: 0;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
     }
 
     .card i {
-      font-size: 42px;
-      color: #6366f1;
+      font-size: 40px;
+      color: #4f46e5;
       margin-bottom: 15px;
-      z-index: 1;
-      position: relative;
     }
 
     .card h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 12px;
-      color: #1f2937;
-      z-index: 1;
-      position: relative;
     }
 
     .card p {
       font-size: 0.95rem;
-      color: #6b7280;
-      z-index: 1;
-      position: relative;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      text-align: left;
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #64748b;
     }
 
     .card a {
@@ -109,81 +124,146 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: background 0.3s ease;
-      z-index: 1;
-      position: relative;
     }
 
     .card a:hover {
       background: #4f46e5;
     }
 
-    /* Responsive Text */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 999;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
     @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+      }
       header h1 {
         font-size: 2.2rem;
-      }
-
-      header p {
-        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1><i class="fas fa-certificate"></i> Services & Certificates</h1>
-    <p>Learn valuable tech skills and earn certificates that matter.</p>
-  </header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-laptop-code"></i> My Web Services</div>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Services Grid Section -->
-  <section class="services-section">
+<!-- Header -->
+<header>
+  <h1>Professional Website & App Services</h1>
+  <p>Modern, fast & mobile-ready websites with backend integration</p>
+</header>
 
-    <div class="card">
-      <i class="fas fa-code"></i>
-      <h3>Web Development</h3>
-      <p>Master HTML, CSS, JS, and modern frameworks like React & Tailwind. Build real projects.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+<!-- Services -->
+<section class="services-section">
 
-    <div class="card">
-      <i class="fas fa-mobile-alt"></i>
-      <h3>Mobile App Development</h3>
-      <p>Create powerful Android & iOS apps using Flutter and Dart with hands-on guidance.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+  <div class="card">
+    <i class="fas fa-code"></i>
+    <h3>Web Development</h3>
+    <p>Design responsive websites using HTML, CSS, JavaScript & React.</p>
+    <ul>
+      <li>Static or Dynamic Website</li>
+      <li>React + Tailwind CSS</li>
+      <li>Admin Panel (optional)</li>
+    </ul>
+    <p><strong>Price: ₹999 – ₹1499</strong></p>
+    <a href="contact.html">Request Now</a>
+  </div>
 
-    <div class="card">
-      <i class="fas fa-database"></i>
-      <h3>Database Management</h3>
-      <p>Learn MySQL, MongoDB & Firebase with real-time queries and schema design skills.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+  <div class="card">
+    <i class="fas fa-mobile-alt"></i>
+    <h3>Mobile App Development</h3>
+    <p>Create Android & iOS apps using Flutter.</p>
+    <ul>
+      <li>Cross-platform App</li>
+      <li>Firebase Backend</li>
+      <li>Login, Database, API</li>
+    </ul>
+    <p><strong>Price: ₹12999 – ₹20000</strong></p>
+     <a href="contact.html">Request Now</a>
+  </div>
 
-    <div class="card">
-      <i class="fas fa-shield-alt"></i>
-      <h3>Cyber Security</h3>
-      <p>Understand threats, data protection & basic ethical hacking. Security from the ground up.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+  <div class="card">
+    <i class="fas fa-server"></i>
+    <h3>Backend Development</h3>
+    <p>Powerful backend systems with databases.</p>
+    <ul>
+      <li>PHP + MySQL</li>
+      <li>Node.js + MongoDB</li>
+      <li>REST API Integration</li>
+    </ul>
+    <p><strong>Price: ₹999 – ₹15999</strong></p>
+     <a href="contact.html">Request Now</a>
+  </div>
 
-    <div class="card">
-      <i class="fas fa-brain"></i>
-      <h3>AI & Machine Learning</h3>
-      <p>Dive into ML algorithms, Python, and practical projects to start your AI journey.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+  <div class="card">
+    <i class="fas fa-fire"></i>
+    <h3>Firebase Integration</h3>
+    <p>Realtime backend, Auth, and Firestore DB.</p>
+    <ul>
+      <li>Login / Signup Auth</li>
+      <li>Cloud Firestore</li>
+      <li>Push Notifications</li>
+    </ul>
+    <p><strong>Price: ₹999 – ₹14999</strong></p>
+    <a href="contact.html">Request Now</a>
+  </div>
 
-    <div class="card">
-      <i class="fas fa-network-wired"></i>
-      <h3>Networking Fundamentals</h3>
-      <p>Explore IP routing, DNS, TCP/IP layers, and build strong core computer network knowledge.</p>
-      <a href="#">Get Certificate</a>
-    </div>
+  <div class="card">
+    <i class="fas fa-layer-group"></i>
+    <h3>Full Stack Web App</h3>
+    <p>Complete solution with frontend + backend.</p>
+    <ul>
+      <li>React + Tailwind</li>
+      <li>Node/PHP + MongoDB</li>
+      <li>Authentication + Admin</li>
+    </ul>
+    <p><strong>Price: ₹999</strong></p>
+    <a href="contact.html">Request Now</a>
+  </div>
 
-  </section>
+  <div class="card">
+  <i class="fas fa-database"></i>
+  <h3>MongoDB Integration</h3>
+  <p>Need to store user data, MongoDB helps manage data fast and securely.</p>
+
+  <h4 style="margin-top: 10px; color:#374151;">Why Use MongoDB?</h4>
+  <ul style="text-align: left; padding-left: 20px;">
+    <li>Fast and flexible database</li>
+    <li>Ideal for dynamic websites & apps</li>
+  </ul>
+
+  <h4 style="margin-top: 10px; color:#374151;">Best For:</h4>
+  <ul style="text-align: left; padding-left: 20px;">
+    <li>User logins</li>
+    <li>Real-time updates</li>
+  </ul>
+
+  <a href="contact.html">Request Now</a>
+</div>
+
+
+</section>
+
+
 
 </body>
 </html>
